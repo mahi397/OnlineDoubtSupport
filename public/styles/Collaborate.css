@@ -2,7 +2,7 @@ html,
 body {
 	padding: 0px;
 	margin: 0px;
-	font-family: raleway;
+	font-family: 'Open Sans', sans-serif;
 	color: white;
 	background-color: #66a5ad
 }
@@ -10,7 +10,7 @@ body {
 .container-fluid {
 	padding: 0px !important;
 	color: white;
-	font-family: raleway;
+	font-family: 'Open Sans', sans-serif;
 	background-color: #66A5Ad;
 }
 
