@@ -63,7 +63,7 @@ $(document).ready(function () {
 
 				editors[otherUser] = ace.edit(otherUser + "Editor");
 				editors[otherUser].setTheme("ace/theme/monokai");
-				editors[otherUser].getSession().setMode("ace/mode/javascript");
+				editors[otherUser].getSession().setMode("ace/mode/java");
 				editors[otherUser].setReadOnly(true);
 				editors[otherUser].getSession().on('change', sendEditorMessage);
 				initCanvas($div, otherUser);
@@ -466,7 +466,7 @@ $(document).ready(function () {
 	function Init() {
 		socket = io();
 
-		socket.on("connect", socketConnected);
+		// socket.on("connect", socketConnected);
 		socket.on('user-joined', userJoined);
 		socket.on('user-left', userLeft);
 		socket.on('message', messageReceived);
@@ -484,6 +484,7 @@ $(document).ready(function () {
 		$(document).on("click", "li[action=loggedInUsers]", showUser);
 
 		userJoined(["public"]);
+		// userJoined(["Enter"]);
 		$onlineUsers.hide();
 	}
 
